@@ -57,7 +57,7 @@ Trying to get better at js code that i may need to add to my project and also im
 
 ## Author
 
-- Website - [K.Jitendranadh](https://www.your-site.com)
+- Website - [K.Jitendranadh](https://github.com/jithu-09)
 - Frontend Mentor - [@jithu-09](https://www.frontendmentor.io/profile/jithu-09)
 
 
