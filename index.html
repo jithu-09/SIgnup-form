@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- bootstap link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- font awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      background-color: hsl(0, 100%, 74%);
+    }
+    .intro h1{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      padding-top: 100px;
+    }
+    .intro p{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+    }
+    .but1{
+      padding: 10px 10px 10px 10px;
+      background-color: hsl(248, 32%, 49%);
+      color: white;
+    }
+    .but2{
+      padding: 10px 10px 10px 10px;
+      background-color: hsl(154, 59%, 51%);
+      color: white;
+    }
+    .but1:hover{
+      background-color: hsl(248, 67%, 66%);
+    }
+    .but2:hover{
+      background-color: hsl(154, 65%, 61%);
+    }
+    .form-control{
+      padding: 5px 5px 5px 10px;
+      font-size: 14px;
+      color: hsl(249, 10%, 26%);
+    }
+    .form-control:hover{
+      border-color: hsl(249, 10%, 26%);
+    }
+    .note p{
+      margin-left: 35px;
+      font-size: 10px;
+      color: hsl(246, 25%, 77%);
+    }
+    .note a{
+      font-size: 10px;
+      text-decoration: none;
+      color: hsl(0, 100%, 74%);
+    }
+    .note a:hover{
+      color: hsl(0, 71%, 47%);
+    }
+    .invalid-feedback {
+         color: hsl(0, 100%, 74%);
+    }  
+    .valid-feedback {
+         color: hsl(154, 65%, 61%);
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); text-decoration: none; }
+
+    @media only screen and (max-width: 600px) {
+      .intro h1{
+        padding-top: 20px;
+        text-align: center;
+      }
+      .intro p{
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+ <div class="container my-5">
+    <div class="row col-md-10 mx-auto">
+      <div class="col-md-5 col-sm-12 text-light mx-auto intro">
+          <h1 class="mt-5">Learn to code by watching others</h1>
+          <br>
+          <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+            but understanding how developers think is invaluable.</p>
+      </div>
+      <div class="col-md-6 col-sm-12 pt-3">
+        <div class="shadow-lg btn btn-block text-center but1"><b>Try it free 7 days</b> then $20/mo. thereafter</div>
+        <br>
+        <div class="shadow bg-light rounded p-4">
+          <form class="requires-validation" novalidate>
+            <div class="form-group">
+              <input type="text" class="form-control form-control-lg" placeholder="First Name" required>
+              <div class="valid-feedback">Firstname field is valid!</div>
+              <div class="invalid-feedback text-right">Firstname field cannot be blank!</div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control form-control-lg" placeholder="Last Name" required>
+              <div class="valid-feedback">Lastname field is valid!</div>
+              <div class="invalid-feedback text-right">Lastname field cannot be blank!</div>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control form-control-lg" placeholder="Email Address" required>
+              <div class="valid-feedback">Email field is valid!</div>
+              <div class="invalid-feedback text-right">Email field cannot be blank!</div>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control form-control-lg" placeholder="Password" required>
+              <div class="valid-feedback">Password field is valid!</div>
+              <div class="invalid-feedback text-right">Password field cannot be blank!</div>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="shadow-lg btn btn-block text-center but2" placeholder="Claim your free trial" required>
+            </div>
+          </form>
+          <div class="note"><p>By clicking the button, you are agreeing to our <span><a href="#">Terms and Services</a></span></p></div>
+        </div>
+      </div>
+    </div>
+ </div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/jithu-09">K.Jitendranadh</a>.
+    </p>
+  </footer>
+  <script>
+    (function () {
+    'use strict'
+    const forms = document.querySelectorAll('.requires-validation')
+    Array.from(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+      
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+    </script>
+<!-- bootstrap js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
