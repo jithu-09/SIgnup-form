@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click Here](https://jithu-09.github.io/Signup-form/)
+- Solution URL: [Click Here](https://github.com/jithu-09/Signup-form/edit/main/README.md)
 - Live Site URL: [Click Here](https://signup-form-pi.vercel.app/)
 
 ## My process
