@@ -1,4 +1,4 @@
-# SIgnup-form
+# Signup-form
 
 # Frontend Mentor - Intro component with sign up form solution
 
